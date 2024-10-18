@@ -7,5 +7,17 @@ type User struct {
 	Password   string `json:"password"`
 }
 
-// we need to be able to store a user
-// Other functions we need to do things with the user we will determine later
+type PublicUserInfo struct {
+	FirstName  string `json:"firstName"`
+	SecondName string `json:"secondName"`
+	Email      string `json:"email"`
+}
+
+func (s *User) GetPublicUserInfo() PublicUserInfo {
+	user := PublicUserInfo{
+		FirstName:  s.FirstName,
+		SecondName: s.SecondName,
+		Email:      s.Email,
+	}
+	return user
+}

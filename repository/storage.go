@@ -1,4 +1,4 @@
-package utils
+package repository
 
 import (
 	"github.com/DevitoDbug/golangJWTAuthTemplate/models"
